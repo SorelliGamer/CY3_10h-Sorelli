@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    if(isset($_GET['ok'])){
+        $itens = $_SESSION['Itens'];
+    }
+    else {
+        $itens = [];
+    }
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +20,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main action="verificar.php" method="post" class="container">
+    <main class="container">
         <h1>Top vendas</h1>
-        <form class="container_input">
+        <form action="verificar.php" method="post"  class="container_input">
             <input type="text" name="pesquisa" id="pesquisa">
             <button type="submit">🔍</button>
-</form>
+        </form>
         <table>
         <tr>
             <th>nome</th>
@@ -20,7 +33,21 @@
             <th>quantidade</th>
             <th>valor</th>
         </tr>
-        <!-- CODIGO PHP -->
+    <?php if (!empty($itens)): ?>
+        <?php foreach ($itens as $item):?>
+            <tr>
+            <td><?php echo htmlspecialchars($item[0]);?></td>
+            <td><?php echo htmlspecialchars($item[1]);?></td>
+            <td><?php echo htmlspecialchars($item[2]);?></td>
+            <td><?php echo htmlspecialchars($item[3]);?></td>
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>
+            <td colspan="4" style="text-align:center;" >Nenhum item encontrado.</td>
+        </tr>
+    <?php endif; ?>
+        
         </table>
     </main>
 </body>
