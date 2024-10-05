@@ -33,12 +33,18 @@
                 echo    '<td>'.$item['Nome'].'</td>';
                 echo    '<td>'.$item['Quantidade'].'</td>';
                 echo    '<td> <a href="editar.php?id='.$item['Id'].'">Editar</a> </td>';
-                echo    '<td>deletar</td>';
+                echo    '<td> <a href="deletar.php?id='.$item['Id'].'">Deletar</a> </td>';
                 echo '</tr>';
                 }
-            }
-                
+            }    
             ?>
+            <tr>
+                <td class="add" colspan="4">
+                <?php
+                    echo '<a type="submit" class="botao_add" href="Adicionar.php">Adicionar</a>';
+                    ?>
+                </td>
+            </tr>
         </table>
     </main>
 </body>

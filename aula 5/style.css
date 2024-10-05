@@ -25,6 +25,12 @@ h1 {
     font-size: 50px;
 }
 
+table tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 table th {
     font-weight: bloder;
     font-size: 30px;
@@ -49,4 +55,30 @@ table tr.infos {
 
 table tr td {
     padding: 10px;
+}
+
+.add{
+    display: grid;
+    place-items: center;
+    background-color: gray;
+}
+
+.add:hover{
+    display: grid;
+    place-items: center;
+    background-color: rgba(128, 128, 128, 0.473);
+}
+
+.botao_add{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    background: gray;
+}
+
+.botao_add:hover{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    background: rgba(128, 128, 128, 0.356);
 }
