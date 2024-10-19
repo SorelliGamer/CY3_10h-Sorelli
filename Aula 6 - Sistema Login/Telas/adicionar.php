@@ -1,7 +1,5 @@
 <?php
     include('../../conexoes/conexao_sistema.php');
-    session_start();
-    $id = $_SESSION['id'];
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $id = $_POST['id'];
