@@ -87,6 +87,6 @@ else{
 }
 
 // FECHA A CONEXÃO
-$mysqli->close();
+// $mysqli->close();
 
 ?>
