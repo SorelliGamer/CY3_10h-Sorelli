@@ -8,7 +8,7 @@
 <body>
     <main>
         <h1>cadastrar fornecedores</h1>
-        <form action="../../db/criar_fornecedor.php" method="post">
+        <form action="../../db/add_fornecedor.php" method="post">
             <div>
                 <label for="nome">nome</label>
                 <input type="text" name="nome" id="nome" required>

@@ -1,13 +1,13 @@
 <?php
 
-    require_once '../connectio/conn.php'
+    require_once '../connection/conn.php';
 
     $id = $_GET['id'];
-    $sql_codigo = "DELETE FROM fornecedores WhErE id='$id'";
+    $sql_codigo = "DELETE FROM fornecedores WHERE id='$id'";
 
 
     if ($mysqli->query($sql_codigo) === TRUE){
-        header('location: ../screen/fornecedores/fornecedores_painel.php');
+        header('location: ../screens/fornecedores/fornecedores_painel.php');
     }
     
 ?>

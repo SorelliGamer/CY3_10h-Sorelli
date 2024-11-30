@@ -1,15 +1,16 @@
 <?php
-    require_once '../connection/conn.php'
+    require_once '../connection/conn.php';
 
     $nome = $_POST['nome'];
     $cidade = $_POST['cidade'];
 
-    $sql_codigo = "INSERT INTO fornecedores (nome, cidade) VALUES ($nome, $cidade)";
+    $sql_codigo = "INSERT INTO fornecedores (nome, cidade) VALUES ('$nome', '$cidade')";
 
     $resultado = $mysqli->query($sql_codigo);
-
+    var_dump($resultado);
     if ($resultado === TRUE){
-        header('location: ../screens/fornecedores/fornecedores_painel.php?erro');
+        header('location: ../screens/fornecedores/fornecedores_painel.php');
     } 
+    
 
 ?>
