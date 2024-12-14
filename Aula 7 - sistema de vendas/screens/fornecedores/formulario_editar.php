@@ -32,7 +32,7 @@
             </div>
             <div>
                 <button type="submit">Editar</button>
-                <a href="fornecedores_painel.php">Voltar</a>
+                <a href="jogos_painel.php">Voltar</a>
             </div>
         </form>
     </main>
