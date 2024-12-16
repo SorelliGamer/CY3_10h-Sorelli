@@ -61,9 +61,7 @@ if(!$banco_de_dados_existe){
     }
 
 }
-else{
-    echo "Banco de dados já existe! \n";
-}
+
 
 // FECHA A CONEXÃO
 // $mysqli->close();
